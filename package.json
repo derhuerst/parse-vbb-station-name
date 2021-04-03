@@ -1,5 +1,4 @@
 {
-	"private": true,
 	"name": "parse-vbb-station-name",
 	"description": "Parse VBB stop/station names.",
 	"version": "2.0.0",
