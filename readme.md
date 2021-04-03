@@ -19,7 +19,64 @@ npm install parse-vbb-station-name
 ## Usage
 
 ```js
-// todo
+const parse = require('parse-vbb-station-name')
+
+console.log(parse('S+U Neukölln (Berlin) [U7]')) // 900078272
+```
+
+```js
+{
+	sbahnUbahn: {type: 'sbahnUbahn', text: 'S+U', offset: 0},
+	name: {type: 'text', text: 'Neukölln', offset: 4},
+	differentiators: [
+		{type: 'differentiator', text: 'Berlin', offset: 14},
+	],
+	part: [
+		{type: 'line', text: 'U7', offset: 23},
+	],
+}
+```
+
+```js
+console.log(parse('Eggersdorf (Strausberg), Schule')) // 900320601
+```
+
+```js
+{
+	name: {type: 'text', text: 'Schule', offset: 25},
+	group: {
+		type: 'text',
+		offset: 0,
+		text: 'Eggersdorf',
+		differentiators: [
+			{type: 'differentiator', text: 'Strausberg', offset: 12},
+		],
+	},
+}
+```
+
+```js
+console.log(parse('Abzw. n Schossin, Warsow b Schwerin (Meckl)')) // 900552438
+```
+
+```js
+{
+	name: {type: 'text', text: 'Abzw. n Schossin', offset: 0},
+	group: {
+		type: 'text',
+		offset: 18,
+		text: 'Warsow',
+		differentiators: [
+			{
+				type: 'differentiator',
+				offset: 25,
+				text: 'b Schwerin',
+				raw: {type: 'differentiator', text: 'Schwerin', offset: 27},
+			},
+			{type: 'differentiator', text: 'Meckl', offset: 37},
+		],
+	},
+}
 ```
 
 
