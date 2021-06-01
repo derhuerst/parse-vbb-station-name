@@ -124,6 +124,10 @@ const testCases = [
 		group: text(0, 'Berlin'),
 		part: [text(37, 'Bernkast.Str.')],
 	}],
+	['900000066451', 'Berlin, Baseler Str. ', {
+		name: text(8, 'Baseler Str.'),
+		group: text(0, 'Berlin'),
+	}],
 	['900552032', 'Schwerin Süd (STR/Bus)', {
 		name: text(0, 'Schwerin Süd'),
 		part: [text(14, 'STR/Bus')],

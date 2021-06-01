@@ -58,8 +58,8 @@ exp ->
 		})
 	%}
 	# 900470000 "Cottbus, Hauptbahnhof"
-	| text %comma _ text {%
-		([group, _, __, name]) => ({
+	| text %comma _ text _ {%
+		([group, _, __, name, ___]) => ({
 			name,
 			group,
 		})
