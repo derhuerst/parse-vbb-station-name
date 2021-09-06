@@ -9,16 +9,26 @@ const parseVbbStationName = (name) => {
 	// parser.restore()
 	// parser.save()
 
-	parser.feed(name)
-	parser.finish()
+	try {
+		parser.feed(name)
+		parser.finish()
+	} catch (err) {
+		err.isParseError = true
+		err.input = name
+		throw err
+	}
 
 	if (parser.results.length === 0) {
 		const err = new Error(`no parse results with "${name}"`)
+		err.isParseError = true
+		err.input = name
 		err.results = parser.results
 		throw err
 	}
 	if (parser.results.length > 1) {
 		const err = new Error(`grammar is ambiguous with "${name}"`)
+		err.isParseError = true
+		err.input = name
 		err.results = parser.results
 		throw err
 	}
