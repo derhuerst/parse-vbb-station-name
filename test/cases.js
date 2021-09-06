@@ -503,6 +503,13 @@ const testCases = [
 			differentiators: [diff(9, 'b Lübz', diff(11, 'Lübz'))],
 		},
 	}],
+	['900000203432', 'Pinnow (bei Velten), Bernsteinsee', {
+		name: text(21, 'Bernsteinsee'),
+		group: {
+			...text(0, 'Pinnow'),
+			differentiators: [diff(8, 'bei Velten', diff(12, 'Velten'))],
+		},
+	}],
 
 	// 2 differentiators
 	['900553093', 'Runow, Bülow b Schwerin (Meckl)', {
