@@ -52,8 +52,9 @@ exp ->
   # 900553095 "Bülow (b Schwerin)"
 	# 900557423 "Dambeck (b LWL)"
 	# 900180020 "S.-Allende-Str./Wendenschloßstr. (Berlin)"
- 	| text _ differentiator {%
-		([name, _, diff]) => ({
+	# 900980196 "Alt-Karow/Straße 74, (Berlin)"
+ 	| text %comma:? _ differentiator {%
+		([name, _, __, diff]) => ({
 			name, differentiators: [diff],
 		})
 	%}

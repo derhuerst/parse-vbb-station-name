@@ -384,6 +384,10 @@ const testCases = [
 		name: text(0, 'Sonnenallee /Baumschulenstr.'),
 		differentiators: [diff(30, 'Berlin')],
 	}],
+	['900980196', 'Alt-Karow/Straße 74, (Berlin)', {
+		name: text(0, 'Alt-Karow/Straße 74'),
+		differentiators: [diff(22, 'Berlin')],
+	}],
 
 	// at notation
 	['900557423', 'Dambeck (b LWL)', {
