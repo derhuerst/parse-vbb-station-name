@@ -4,6 +4,7 @@ const {Parser, Grammar} = require('nearley')
 const grammar = require('./lib/grammar')
 
 const parseVbbStationName = (name) => {
+	if ('string' !== typeof name) throw new TypeError('name must be a string')
 	// todo: optimize this
 	const parser = new Parser(Grammar.fromCompiled(grammar))
 	// parser.restore()

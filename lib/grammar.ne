@@ -24,7 +24,7 @@ const asDifferentiator = (token) => ({
 const combineAtNotation = (tokens, raw) => ({
 	type: 'differentiator',
 	text: tokens.filter(t => !!t).map(t => t.text).join(''),
-	offset: tokens[0].offset,
+	offset: tokens.find(t => !!t).offset,
 	raw,
 })
 
