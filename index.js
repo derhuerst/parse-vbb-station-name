@@ -9,7 +9,7 @@ const parseVbbStationName = (name) => {
 	// parser.restore()
 	// parser.save()
 
-	parser.feed(name)
+	parser.feed(name.trim())
 	parser.finish()
 
 	if (parser.results.length === 0) {

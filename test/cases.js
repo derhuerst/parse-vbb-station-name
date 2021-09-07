@@ -150,6 +150,13 @@ const testCases = [
 			differentiators: [diff(10, 'PR')],
 		},
 	}],
+	['900000245712', 'Klein Ziescht (Baruth/Mark), Ort', {
+		name: text(29, 'Ort'),
+		group: {
+			...text(0, 'Klein Ziescht'),
+			differentiators: [diff(15, 'Baruth/Mark')],
+		},
+	}],
 	['900559794', 'Lauterbach(Rüg) Mole', {
 		name: text(16, 'Mole'),
 		group: {

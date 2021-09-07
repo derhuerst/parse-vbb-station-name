@@ -1,15 +1,15 @@
 'use strict'
 
 const {pipeline} = require('stream')
-const split = require('split2')
+const parseCsv = require('csv-parser')
 const {inspect} = require('util')
 const lexer = require('../lib/lexer')
 const parse = require('..')
 
 process.stdin
-.pipe(split())
+.pipe(parseCsv())
 .on('data', (row) => {
-	const [id, name] = JSON.parse(row)
+	const {stop_id: id, stop_name: name} = row
 
 	lexer.reset(name)
 	const tokens = Array.from(lexer)
