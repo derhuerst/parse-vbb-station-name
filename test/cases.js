@@ -417,6 +417,10 @@ const testCases = [
 		name: text(0, 'Neuendorf'),
 		differentiators: [diff(11, 'bei Niemegk', diff(15, 'Niemegk'))],
 	}],
+	['de:15001:8010231', 'Meinsdorf (bei Roßlau)', {
+		name: text(0, 'Meinsdorf'),
+		differentiators: [diff(11, 'bei Roßlau', diff(15, 'Roßlau'))],
+	}],
 
 	// at notation + group
 	['900552209', 'H.-J.-P. Lemm Str., Boizenburg (Elbe)', {
@@ -515,6 +519,13 @@ const testCases = [
 		group: {
 			...text(0, 'Pinnow'),
 			differentiators: [diff(8, 'bei Velten', diff(12, 'Velten'))],
+		},
+	}],
+	['900000340157', 'Frauenhagen (bei Angermünde), Ziethenmühle Abzw.', {
+		name: text(30, 'Ziethenmühle Abzw.'),
+		group: {
+			...text(0, 'Frauenhagen'),
+			differentiators: [diff(13, 'bei Angermünde', diff(17, 'Angermünde'))],
 		},
 	}],
 
