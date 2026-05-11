@@ -74,6 +74,11 @@ const testCases = [
 		name: text(4, 'Neukölln'),
 		differentiators: [diff(14, 'Berlin')],
 	}],
+	// lower case
+	['de:11000:900048101', 's heerstr', {
+		sbahnUbahn: S_U(0, 's'),
+		name: text(2, 'heerstr'),
+	}],
 
 	// part
 	['de:11000:900078272', 'S+U Neukölln (Berlin) [U7]', {
